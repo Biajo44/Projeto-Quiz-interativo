@@ -1,0 +1,131 @@
+/* ---- Fundo Matrix ---- */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: system-ui, sans-serif;
+  color: #FF0000;
+  perspective: 1000px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ---- Container ---- */
+.quiz-container {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 12px #FF0000;
+  backdrop-filter: blur(4px);
+  transition: transform 0.8s ease;
+  max-width: 500px;
+  margin: 15vh auto;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #FF0000;
+  border-radius: 12px;
+  padding: 25px;
+  transform-style: preserve-3d;
+}
+
+.quiz-container.flipping {
+  transform: rotateY(90deg);
+}
+
+
+
+/* ---- Botões ---- */
+button {
+  background-color: #111;
+  color: #FF0000;
+   padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  font-size: 1em;
+  border: 1px solid #FF0000;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #FF0000;
+  color: #000;
+  box-shadow: 0 0 8px #FF0000;
+}
+
+
+/* ---- Campo do texto ---- */
+input {
+  padding: 10px;
+  border-radius: 8px;
+   margin-top: 10px;
+  font-size: 16px;
+  background: rgba(255, 0, 0, 0.05);
+  color: #FF0000;
+  outline: none;
+  border: 1px solid #FF0000;
+  width: 80%;
+}
+
+input::placeholder {
+  color: #FF8080;
+}
+
+
+/* ---- Texto ---- */
+#introTexto {
+  border-right: 2px solid #FF0000;
+  white-space: pre-line;
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 120px;
+  text-shadow: 0 0 5px #FF0000;
+}
+
+.questao {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+/* ---- Opções ---- */
+.opcao button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 1em;
+  color: #FF0000;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #FF0000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.opcao button:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+
+/* ---- Oculto ---- */
+.hidden {
+  display: none;
+}
+
+/* ---- Grafico ---- */
+#graficoDesempenho {
+  width: 200px !important;
+  height: 200px !important;
+  margin: 0 auto;
+  display: block;
+}
