@@ -31,6 +31,7 @@ setInterval(drawMatrix, 35);
   //*  Fim  *//
 
 
+
 //*  Quiz  *//
 const startScreen = document.getElementById("start-screen");
 const nameScreen = document.getElementById("name-screen");
@@ -52,6 +53,8 @@ const quizContainer = document.querySelector(".quiz-container");
 let current = 0;
 let score = 0;
 let nome = "";
+
+
 
 //*  Fim  *//
 
@@ -200,7 +203,7 @@ function loadQuestion() {
   q.opcao.forEach((opt, i) => {
     const btn = document.createElement("button");
     btn.textContent = opt;
-    btn.onclick = () => checkAnswer(i, q.correct);
+    btn.onclick = () =>  checkAnswer(i, q.correct);
     opcaoEl.appendChild(btn);
   });
 }
@@ -264,15 +267,19 @@ function mostrarResultado() {
       labels: ["Acertos", "Erros"],
       datasets: [{
         data: [score, erros],
-        backgroundColor: ["#FF0000", "#330000"],
+        backgroundColor: ["#00FF00", "#330000"],
         borderColor: "#FF5555",
         borderWidth: 1
       }]
     },
-    options: {
+    options:{
+      responsive: false,
+      maintainAspectRatio:false,
       plugins: {
         legend: { labels: { color: "#FF0000" } }
-      }
-    }
-  });
+      
+     }
+   }
+});
 }
+

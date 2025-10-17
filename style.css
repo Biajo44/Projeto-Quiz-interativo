@@ -34,6 +34,7 @@ canvas {
   border-radius: 12px;
   padding: 25px;
   transform-style: preserve-3d;
+
 }
 
 .quiz-container.flipping {
@@ -123,9 +124,13 @@ input::placeholder {
 }
 
 /* ---- Grafico ---- */
+
 #graficoDesempenho {
-  width: 200px !important;
-  height: 200px !important;
-  margin: 0 auto;
+  width: 180px !important;
+  height: 180px !important;
   display: block;
+  margin: 0 auto;
+  
 }
+
+
