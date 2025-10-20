@@ -1,4 +1,4 @@
-  quiz Interativo 🧠<br>
+  Quiz Interativo 🧠<br>
 Projeto desenvolvindo em *HTML, CSS e Javascript*.
 visual inspirado na estética *matrix*, com animação transições e um gráfico de desempenho.
 
